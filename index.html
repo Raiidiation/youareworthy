@@ -1,64 +1,45 @@
-<h3>he is stare </h3>
-<img src="https://raidiation.neocities.org/assets/beanutputterman.jpeg" alt="BEanut PuttEr MEn" width="256" height="256">
-<script type = "text/javascript">
+<!DOCTYPE html>
+<html>
+<title>rai's database v1 </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
 
-// Note: Like all Javascript password scripts, this is hopelessly insecure as the user can see 
-//the valid usernames/passwords and the redirect url simply with View Source.  
-// And the user can obtain another three tries simply by refreshing the page.  
-//So do not use for anything serious!
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+  <a href="https://unknwownssand.github.io/youareworthy/" class="w3-bar-item w3-button">aG9tZQ==</a>
+  <a href="goodusers.html" class="w3-bar-item w3-button">cGVvcGxl</a>
+  <a href="idiots.html" class="w3-bar-item w3 -button">bG9zIHBlbmRlam9z</a>
+</div>
 
-var count = 2;
-function validate() {
-var un = document.myform.username.value;
-var pw = document.myform.pword.value;
-var valid = false;
+<div id="main">
 
-var unArray = ["defaultuser"];  // as many as you like - no comma after final entry
-var pwArray = ["weherearetheonlyleft"];  // the corresponding passwords;
+<div class="w3-teal">
+  <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+    <h1>W3lc0m3</h1>
+  </div>
+</div>
 
-for (var i=0; i <unArray.length; i++) {
-if ((un == unArray[i]) && (pw == pwArray[i])) {
-valid = true;
-break;
+<div class="w3-container">
+  <p> hello welcome to this database of random </p>
+</div>
+
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
 }
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
 }
-
-if (valid) {
-alert ("Login was sucessfully processed.  You will be redirected to the members page now.");
-window.location = "ZGF0YWJhc2U=.htm";
-return false;
-}
-
-var t = " tries";
-if (count == 1) {t = " try"}
-
-if (count >= 1) {
-alert ("Invalid username and/or password.  You have " + count + t + " left.");
-document.myform.username.value = "";
-document.myform.pword.value = "";
-setTimeout("document.myform.username.focus()", 25);
-setTimeout("document.myform.username.select()", 25);
-count --;
-}
-
-else {
-alert ("Still incorrect! You have no more tries left!");
-document.myform.username.value = "No more tries allowed!";
-document.myform.pword.value = "";
-document.myform.username.disabled = true;
-document.myform.pword.disabled = true;
-return false;
-}
-
-}
-
 </script>
-
-<form name = "myform">
-<p>Enter Username <input type="text" name="username"> Enter Password <input type="password" name="pword">
-<input type="button" value="Sign In" name="Submit" onclick= "validate()">
-</p>
-
-</form>
-<title>Unsecure Login</title>
-
+</body>
+</html>
