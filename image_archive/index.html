@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html>
+<title>rai's database v1 </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<body>
 
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+  <a href="https://raiidiation.github.io/youareworthy/" class="w3-bar-item w3-button">aG9tZQ==</a>
+  <a href="goodusers.html" class="w3-bar-item w3-button">cGVvcGxl</a>
+  <a href="idiots.html" class="w3-bar-item w3 -button">bG9zIHBlbmRlam9z</a>
+  <a href="image_archive" class="w3-bar-item w3-button">images</a>
+</div>
+
+<div id="main">
+
+<div class="w3-teal">
+  <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+    <h1>sstv images</h1>
+  </div>
+</div>
+
+<div class="w3-container">
+  <p> nothing is currently here check back later </p>
+</div>
+
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+</body>
+</html>
